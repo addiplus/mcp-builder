@@ -406,7 +406,7 @@ Claude Co-Work implements the **MCP 6/18 spec** (June 18, 2025). These are MANDA
 | `POST /oauth/register` for dynamic client registration | oauth/register.ts |
 | `GET /oauth/authorize` with PKCE (code_challenge + S256) | oauth/authorize.ts |
 | `POST /oauth/token` exchanges code + code_verifier for access_token | oauth/token.ts |
-| `token_type` should be `"Bearer"` (capital B) — case-insensitive per RFC 6749 §4.2.2/§5.1, but Co-Work's parser is strict in practice | **CRITICAL** |
+| `token_type` should be `"Bearer"` (capital B). Case-insensitive per RFC 6749 §4.2.2/§5.1, but Co-Work's parser is strict in practice | **CRITICAL** |
 | 405 for GET /mcp returns plain text + `Allow` header (not JSON-RPC) | api/mcp.ts |
 
 ### 4.2 Stateless HMAC-signed auth codes
